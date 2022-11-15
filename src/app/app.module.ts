@@ -16,6 +16,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { WrapperComponent } from './pages/wrapper/wrapper.component';
 import { ContactPersonComponent } from './pages/contact-person/contact-person.component';
+import { SiteDetailsComponent } from './pages/site-details/site-details.component';
+import { StandardsAndSitesComponent } from './pages/standards-and-sites/standards-and-sites.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,8 @@ import { ContactPersonComponent } from './pages/contact-person/contact-person.co
     SidebarComponent,
     WrapperComponent,
     ContactPersonComponent,
+    SiteDetailsComponent,
+    StandardsAndSitesComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +39,7 @@ import { ContactPersonComponent } from './pages/contact-person/contact-person.co
     FormsModule,
     ReactiveFormsModule,
     NgxMatSelectSearchModule,
+    CommonModule,
     StoreModule.forRoot({ tab: tabReducer })
   ],
   providers: [],

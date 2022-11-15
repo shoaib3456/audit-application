@@ -24,7 +24,7 @@
     "@ngrx/store": "^14.3.2",
     "bootstrap": "^5.2.0",
     "google-libphonenumber": "^3.2.30",
-    "intl-tel-input": "^17.0.18",
+    "intl-tel-input": "^17.0.19",
     "ng2-tel-input": "^2.3.0",
     "ngx-bootstrap": "^9.0.0",
     "ngx-country-picker": "^2.2.0",

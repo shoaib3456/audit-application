@@ -18,6 +18,13 @@ export class SidebarComponent implements OnInit {
     this.tab$ = store.pipe(select('tab'));
   }
 
+  greaterThan(num1: any, num2: any) {
+    return num1 > num2;
+  }
+  lessThan(num1: any, num2: any) {
+    return num1 < num2;
+  }
+
   next() {
     this.store.dispatch(next());
 

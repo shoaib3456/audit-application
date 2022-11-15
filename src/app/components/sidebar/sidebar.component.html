@@ -3,7 +3,7 @@
     <small>304809384</small>
 </div>
 <div class="d-flex flex-column w-100 sidebar-nav mt-5 pb-5"  *ngIf="(tab$ | async) != null"  >
-    <div class="link-1-parent" [ngClass]="{ 'active' : (tab$ | async) == 0 , 'past' : ((tab$ | async) == 1 || (tab$ | async) == 2 || (tab$ | async) == 3 ||  (tab$ | async) == 4 ||  (tab$ | async) == 5 )  }">
+    <div class="link-1-parent" [ngClass]="{ 'active' : (tab$ | async) == 0 , 'past' : greaterThan(tab$ | async , 0) }">
         <div class="link-1">
             <span>Customer Registration</span>
             <i class="bi bi-lightbulb-fill"></i>
@@ -17,7 +17,7 @@
             <div class="dot"></div>
         </div>
     </div>
-    <div class="link-1-parent" [ngClass]="{ 'active' : (tab$ | async) == 1 , 'past' : ((tab$ | async) == 2 || (tab$ | async) == 3 ||  (tab$ | async) == 4 ||  (tab$ | async) == 5 )  }">
+    <div class="link-1-parent" [ngClass]="{ 'active' : (tab$ | async) == 1 , 'past' : greaterThan(tab$ | async , 1)  }">
         <div class="link-1">
             <span>Contact Persons</span>
             <i class="bi bi-telephone-fill"></i>
@@ -31,9 +31,9 @@
             <div class="dot"></div>
         </div>
     </div>
-    <div class="link-1-parent" [ngClass]="{ 'active' : (tab$ | async) == 2 , 'past' : ((tab$ | async) == 3 ||  (tab$ | async) == 4 ||  (tab$ | async) == 5 )  }">
+    <div class="link-1-parent" [ngClass]="{ 'active' : (tab$ | async) == 2 , 'past' : greaterThan(tab$ | async , 2)  }">
         <div class="link-1">
-            <span>No Of Sites</span>
+            <span>Standards & Sites</span>
             <i class="bi bi-bar-chart-fill"></i>
         </div>
         <div class="bubble">
@@ -45,7 +45,7 @@
             <div class="dot"></div>
         </div>
     </div>
-    <div class="link-1-parent" [ngClass]="{ 'active' : (tab$ | async) == 3 , 'past' : ((tab$ | async) == 4 ||  (tab$ | async) == 5 ) }">
+    <div class="link-1-parent" [ngClass]="{ 'active' : greaterThan(tab$ | async , 2) && lessThan(tab$ | async , 10) , 'past' : greaterThan(tab$ | async , 9) }">
         <div class="link-1">
             <span>Site Details</span>
             <i class="bi bi-coin"></i>
@@ -59,7 +59,7 @@
             <div class="dot"></div>
         </div>
     </div>
-    <div class="link-1-parent" [ngClass]="{ 'active' : (tab$ | async) == 4 , 'past' : ((tab$ | async) == 5 ) }">
+    <div class="link-1-parent" [ngClass]="{ 'active' : (tab$ | async) == 10 , 'past' : greaterThan(tab$ | async , 11) }">
         <div class="link-1">
             <span>Site Details</span>
             <i class="bi bi-coin"></i>
